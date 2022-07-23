@@ -9,7 +9,7 @@
   <title>Frontend Mentor | Suite landing page</title>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;400;500;700&display=swap');
 
     * {
       font: Normal 16px/28px 'Epilogue'; 
@@ -20,12 +20,10 @@
     body{
       width:377px;
       margin:auto;
-      border:1px solid red;
     }
  
     header, section.hero, div.herotext, 
-    div.numeros, div.references > div, 
-    footer {
+    div.numeros, div.references > div, {
       display:flex;
       flex-wrap:wrap;
     }
@@ -93,11 +91,12 @@
     div.herotext button.requestbetalarge:hover{
       background: linear-gradient(135deg, #A060FF 0%, #CB30E3 49.21%, #FFA84E 100%);
     }
+    img.heroimg {width: auto}
+
     div.references {
-      width:100%;
+      width:auto;
       justify-content:space-around;
       margin:0px 16px;
-      border:1px solid red
     }
 
     div.references > div {
@@ -121,19 +120,76 @@
       color: #49566D;
     }
 
-    div.justworks{
+    section.justworks{
       margin-top:200px;
       background: #172339;
       border-radius: 15px;
-      overflow:visible
+      width:auto;
+      height: 748px;
     }
+    
     img.jeremy {
-      position:relative;
+      Position:relative;
       top:-185px;
-      left:calc((375px - 255px)/2);
-      width: 255px;
+      left:60px;
+      width:255px;
     }
+    img.curvedlinewithe{
+      display: block;
+      margin:-160px auto 35px;
+    }
+    div.justworks > h2, div.justworks > h2 > bold {
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 48px;
+      text-align: center;
+      letter-spacing: -0.416667px;
+      color: #FAF8F6;
+    }
+    div.justworks > h2 > bold {font-weight: bold}
+
+    div.justworks > p.testimonial {
+      margin:35px 16px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 32px;
+      text-align: center;
+      letter-spacing: 0.09px;
+      color: #F3EDE7;
+    }
+    div.justworks > p.name{
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 32px;
+      text-align: center;
+      text-transform:uppercase;
+      letter-spacing: -0.18px;
+      color: #FAF8F6;
+    }
+    div.justworks > p.position{
+      text-align: center;
+      letter-spacing: 2.5px;
+      color: #F3EDE7;
+    }
+
+    div.grey {
+      position: relative;
+      top:-100px;
+      background-color:#F3EDE7;
+      height: 386px;
+      z-index: -1;
+    }
+    footer {
+      width: max-content;
+      margin:auto;
+      padding:155px 0px 0px;
+      text-align: center;
   
+      
+      
+    }
+    
+    footer > p.copyright {margin:38px auto}
 
     
 
@@ -170,28 +226,31 @@
         </div>
       </div>
     </section>
-    <div class="justworks">
+    <section class="justworks">
       <img class="jeremy" src="assets/image-jeremy-small.png" alt="Man using his phone">
       <img class="curvedlinewithe" src="assets/pattern-curved-line-2.svg" alt="curved line">
+
       <div class="justworks">
-        <h2>It just <strong>works</strong></h2>
+        <h2>It just <bold>works</bold></h2>
         <p class="testimonial"> “I really like how it is an all-in-one solution that handle many of 
           the tasks that you would normally need separate tools to do the same 
           job. This thing is a miracle worker.”</p>
         <p class="name">Jeremy Robinson</p>
         <p class="position">CMO, FYLO</p>
       </div>
-    </div>
+    </section>
   </main>
-  <footer>
-    <img class="logo" src="assets/logo.svg" alt="logo">
-    <p class="copyright">Copyright - Suit</p>
-    <div class="socialmedia">
-      <img class="socialicon" src="assets/icon-facebook.svg" alt="icon facebook">
-      <img class="socialicon" src="assets/icon-twitter.svg" alt="icon facebook">
-      <img class="socialicon" src="assets/icon-instagram.svg" alt="icon facebook">
-    </div>
-  </footer>
+  <div class="grey">
+    <footer>
+        <img class="logo" src="assets/logo.svg" alt="logo">
+        <p class="copyright">Copyright - Suit</p>
+        <div class="socialmedia">
+          <img class="socialicon" src="assets/icon-facebook.svg" alt="icon facebook">
+          <img class="socialicon" src="assets/icon-twitter.svg" alt="icon facebook">
+          <img class="socialicon" src="assets/icon-instagram.svg" alt="icon facebook">
+        </div> 
+    </footer>
+  </div>
  
 </body>
 </html>
@@ -199,14 +258,3 @@
 
 
 
-/* Rectangle Copy */
-
-position: absolute;
-left: 17.28%;
-right: 17.28%;
-top: 19.48%;
-bottom: 0%;
-
-/* Dark Blue */
-background: #172339;
-border-radius: 15px;
