@@ -5,25 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Suite landing page</title>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;400;500;700&display=swap');
 
     * {
-      font: Normal 16px/28px 'Epilogue'; 
-      margin:0px; 
+      font: Normal 16px/28px 'Epilogue';
+      margin:0px;
       padding:0px;
     }
-    
+
     body{
       width:377px;
       margin:auto;
     }
- 
-    header, section.hero, div.herotext, 
-    div.numeros, div.references > div, {
+
+    header, section.hero, div.herotext,
+    div.numeros, div.references > div, div.socialmedia {
       display:flex;
       flex-wrap:wrap;
     }
@@ -56,7 +56,6 @@
 
     div.herotext{
       position: relative;
-      border:1px solid red;
     }
     img#curvedlineblack {
       position:absolute;
@@ -74,7 +73,7 @@
       margin:32px 0px 40px;
     }
     h1.slogan bold {font-weight: bold}
-    
+
     div.herotext button.requestbetalarge {
       margin:38px 0px 56px;
       width: 256px;
@@ -96,13 +95,13 @@
     div.references {
       width:auto;
       justify-content:space-around;
-      margin:0px 16px;
+      margin:0px auto;
     }
 
     div.references > div {
       justify-content: center;
       width:33%;
-      margin:40px auto;
+      margin:60px auto;
       }
     p.numeros {
       font-weight: 700;
@@ -121,13 +120,13 @@
     }
 
     section.justworks{
-      margin-top:200px;
+      margin-top:180px;
       background: #172339;
       border-radius: 15px;
       width:auto;
       height: 748px;
     }
-    
+
     img.jeremy {
       Position:relative;
       top:-185px;
@@ -171,7 +170,6 @@
       letter-spacing: 2.5px;
       color: #F3EDE7;
     }
-
     div.grey {
       position: relative;
       top:-100px;
@@ -184,14 +182,96 @@
       margin:auto;
       padding:155px 0px 0px;
       text-align: center;
-  
-      
-      
     }
-    
-    footer > p.copyright {margin:38px auto}
+    footer > p.copyright {
+      margin:38px auto;
+      font-size: 15px;
+      line-height: 32px;
+      text-align: center;
+      letter-spacing: 0.0833333px;
+      color: #49566D;
+    }
+    footer > div.socialmedia {justify-content: space-between;}
 
-    
+
+    @media (min-width:768px) {
+      body{width:768px}
+      header{margin:40px 40px 80px}
+      header > button.requestbeta{
+        width:219px;
+        height: 56px;
+      }
+      section.hero{
+        display: flex;
+        justify-content: space-between;
+        margin: 40px;
+      }
+      div.herotext{
+        position:relative;
+        width:350px;
+        padding-top:00px;
+      }
+      img#curvedlineblack {
+      position:absolute;
+      top:45px;
+      left:223px;
+      width:231px;
+      height: 29px;
+      }
+      h1.slogan{
+        position:absolute;
+        top:57px;
+      }
+      h1.slogan, h1.slogan > bold {
+        font-size: 56px;
+        line-height: 64px;
+        letter-spacing: -0.777778px;
+        width:500px;
+      }
+      p.description {
+        margin-top:260px;
+        width: 350px;
+      }
+      img.heroimg {
+        content:url("assets/image-hero-portrait.webp");
+        width:281px;
+      }
+
+      div.references {
+        display: flex;
+        justify-content: space-around;
+        width:100%;
+      }
+      div.references > div {
+        margin:88px 0px;
+        width: 100px;
+      }
+      
+      section.justworks {
+        margin:194px 40px 0px;
+      }
+      img.jeremy {
+      Position:relative;
+      top:-185px;
+      left:218px;
+      width:255px;
+      }
+
+      div.grey{
+        margin:0px 40px;
+      }
+      footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:auto;
+        margin:40px;
+        border:1px solid red;
+
+        
+      }
+    }
+
 
   </style>
 </head>
@@ -206,9 +286,9 @@
       <div class="herotext">
         <img id="curvedlineblack" src="assets/pattern-curved-line-1.svg" alt="curved line">
         <h1 class="slogan">A <bold>super solution</bold> <br> for your <bold>business.</bold></h1>
-        <p class="description">Our marketing and sales automations help you scale your outreach to 
+        <p class="description">Our marketing and sales automations help you scale your outreach to
           get more leads for your company.</p>
-        <button class="requestbetalarge">Request Beta Access</button>  
+        <button class="requestbetalarge">Request Beta Access</button>
       </div>
       <img class="heroimg" src="assets/image-hero-landscape.webp">
       <div class="references">
@@ -232,8 +312,8 @@
 
       <div class="justworks">
         <h2>It just <bold>works</bold></h2>
-        <p class="testimonial"> “I really like how it is an all-in-one solution that handle many of 
-          the tasks that you would normally need separate tools to do the same 
+        <p class="testimonial"> “I really like how it is an all-in-one solution that handle many of
+          the tasks that you would normally need separate tools to do the same
           job. This thing is a miracle worker.”</p>
         <p class="name">Jeremy Robinson</p>
         <p class="position">CMO, FYLO</p>
@@ -248,12 +328,14 @@
           <img class="socialicon" src="assets/icon-facebook.svg" alt="icon facebook">
           <img class="socialicon" src="assets/icon-twitter.svg" alt="icon facebook">
           <img class="socialicon" src="assets/icon-instagram.svg" alt="icon facebook">
-        </div> 
+        </div>
     </footer>
   </div>
- 
+
 </body>
 </html>
+
+
 
 
 
