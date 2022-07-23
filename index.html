@@ -7,39 +7,172 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
   <title>Frontend Mentor | Suite landing page</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+    * {
+      font: Normal 16px/28px 'Epilogue'; 
+      margin:0px; 
+      padding:0px;
+    }
+    
+    body{
+      width:377px;
+      margin:auto;
+      border:1px solid red;
+    }
+ 
+    header, section.hero, div.herotext, 
+    div.numeros, div.references > div, 
+    footer {
+      display:flex;
+      flex-wrap:wrap;
+    }
+
+    header{
+      justify-content:space-between;
+      align-items:center;
+      margin:24px 16px 56px;
+    }
+    img.logo {width:81px}
+
+    header button.requestbeta{
+      width:182px;
+      height: 48px;
+      border: 1px solid #172339;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.14px;
+      background-color: white;
+      color: #172339;
+    }
+
+    header button.requestbeta:hover {
+      background-color: #172339;
+      color:white;
+    }
+    section.hero{margin:0px 16px;}
+
+    div.herotext{
+      position: relative;
+      border:1px solid red;
+    }
+    img#curvedlineblack {
+      position:absolute;
+      top:0px;
+      left:155px;
+      width:151px;
+      height: 20px;
+    }
+    h1.slogan, h1.slogan bold {
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 44px;
+      letter-spacing: -0.527778px;
+      color: #172339;
+      margin:32px 0px 40px;
+    }
+    h1.slogan bold {font-weight: bold}
+    
+    div.herotext button.requestbetalarge {
+      margin:38px 0px 56px;
+      width: 256px;
+      height: 61px;
+      background: #172339;
+      border-radius: 6px;
+      border:none;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 32px;
+      letter-spacing: -0.18px;
+      color: #FAF8F6;
+    }
+    div.herotext button.requestbetalarge:hover{
+      background: linear-gradient(135deg, #A060FF 0%, #CB30E3 49.21%, #FFA84E 100%);
+    }
+    div.references {
+      width:100%;
+      justify-content:space-around;
+      margin:0px 16px;
+      border:1px solid red
+    }
+
+    div.references > div {
+      justify-content: center;
+      width:33%;
+      margin:40px auto;
+      }
+    p.numeros {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 56px;
+      text-align: center;
+      color: #172339;
+    }
+    p.category {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: center;
+      letter-spacing: 2.5px;
+      color: #49566D;
+    }
+
+    div.justworks{
+      margin-top:200px;
+      background: #172339;
+      border-radius: 15px;
+      overflow:visible
+    }
+    img.jeremy {
+      position:relative;
+      top:-185px;
+      left:calc((375px - 255px)/2);
+      width: 255px;
+    }
+  
+
+    
+
+  </style>
 </head>
 <body>
 
-  <head>
+  <header>
     <img class="logo" src="assets/logo.svg" alt="Logo">
     <button class="requestbeta">Request Beta Access</button>
-  </head>
+  </header>
   <main>
     <section class="hero">
       <div class="herotext">
         <img id="curvedlineblack" src="assets/pattern-curved-line-1.svg" alt="curved line">
-        <h1 class="slogan">A <strong>super solution</strong> <br> for your <strong>business.</strong></h1>
+        <h1 class="slogan">A <bold>super solution</bold> <br> for your <bold>business.</bold></h1>
         <p class="description">Our marketing and sales automations help you scale your outreach to 
           get more leads for your company.</p>
         <button class="requestbetalarge">Request Beta Access</button>  
       </div>
       <img class="heroimg" src="assets/image-hero-landscape.webp">
       <div class="references">
-        <div class="Numeros">
-          <p>2K+</p>
-          <p>8</p>
-          <p>1.2M</p>
+        <div class="companies">
+          <p class="numeros">2K+</p>
+          <p class="category">companies</p>
         </div>
-        <div class="category">
-          <p>companies</p>
-          <p>languages</p>
-          <p>leads</p>
+        <div class="langueges">
+          <p class="numeros">8</p>
+          <p class="category">languages</p>
+        </div>
+        <div class="leads">
+          <p class="numeros">1.2M</p>
+          <p class="category">leads</p>
         </div>
       </div>
     </section>
-    <section class="justworks">
-      <img src="assets/image-jeremy-small.png" alt="Man using his phone">
-      <img src="assets/pattern-curved-line-2.svg" alt="curved line">
+    <div class="justworks">
+      <img class="jeremy" src="assets/image-jeremy-small.png" alt="Man using his phone">
+      <img class="curvedlinewithe" src="assets/pattern-curved-line-2.svg" alt="curved line">
       <div class="justworks">
         <h2>It just <strong>works</strong></h2>
         <p class="testimonial"> “I really like how it is an all-in-one solution that handle many of 
@@ -48,7 +181,7 @@
         <p class="name">Jeremy Robinson</p>
         <p class="position">CMO, FYLO</p>
       </div>
-    </section>
+    </div>
   </main>
   <footer>
     <img class="logo" src="assets/logo.svg" alt="logo">
@@ -59,34 +192,21 @@
       <img class="socialicon" src="assets/icon-instagram.svg" alt="icon facebook">
     </div>
   </footer>
-  Request Beta Access
-
-  A super solution for your business.
-
-  Our marketing and sales automations help you scale your outreach to 
-  get more leads for your company. 
-
-  Request Beta Access
-
-  2K+
-  Companies
-
-  8
-  Languages
-
-  1.2M
-  Leads
-
-  It just works.
-
-  “I really like how it is an all-in-one solution that handle many of 
-  the tasks that you would normally need separate tools to do the same 
-  job. This thing is a miracle worker.”
-
-  Jeremy Robinson
-  CMO, Fylo
-
-  Copyright - Suite
-
+ 
 </body>
 </html>
+
+
+
+
+/* Rectangle Copy */
+
+position: absolute;
+left: 17.28%;
+right: 17.28%;
+top: 19.48%;
+bottom: 0%;
+
+/* Dark Blue */
+background: #172339;
+border-radius: 15px;
