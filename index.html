@@ -64,7 +64,7 @@
       width:151px;
       height: 20px;
     }
-    h1.slogan, h1.slogan bold {
+    h1.slogan, h1.slogan > bold {
       font-weight: 400;
       font-size: 38px;
       line-height: 44px;
@@ -135,6 +135,8 @@
     }
     img.curvedlinewithe{
       display: block;
+      width:50px;
+      height: 40px;
       margin:-160px auto 35px;
     }
     div.justworks > h2, div.justworks > h2 > bold {
@@ -197,6 +199,7 @@
     @media (min-width:768px) {
       body{width:768px}
       header{margin:40px 40px 80px}
+      
       header > button.requestbeta{
         width:219px;
         height: 56px;
@@ -212,11 +215,11 @@
         padding-top:00px;
       }
       img#curvedlineblack {
-      position:absolute;
-      top:45px;
-      left:223px;
-      width:231px;
-      height: 29px;
+        position:absolute;
+        top:45px;
+        left:223px;
+        width:231px;
+        height: 29px;
       }
       h1.slogan{
         position:absolute;
@@ -235,6 +238,7 @@
       img.heroimg {
         content:url("assets/image-hero-portrait.webp");
         width:281px;
+        height: 482px;
       }
 
       div.references {
@@ -246,32 +250,145 @@
         margin:88px 0px;
         width: 100px;
       }
-      
-      section.justworks {
+      section.justworks{
+        height: 684px;
         margin:194px 40px 0px;
       }
       img.jeremy {
-      Position:relative;
-      top:-185px;
-      left:218px;
-      width:255px;
+        Position:relative;
+        top:-185px;
+        left:218px;
+        width:255px;
       }
 
       div.grey{
-        margin:0px 40px;
+        margin:0px 0px;
+        top:-463px;
+        height: 639px;
       }
-      footer{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width:auto;
-        margin:40px;
-        border:1px solid red;
 
+      footer {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items:center;
+        width: auto;
+        padding:498px 40px;
         
+      }
+      
+      div.socialmedia {
+        width:116px;
+        justify-self: end;
       }
     }
 
+    @media (min-width:1440px) {
+      body{width:1440px}
+      header{margin:50px 165px 67px}
+    
+      section.hero{
+        display: flex;
+        justify-content: flex-start;
+        margin: 165px;
+        border:1px solid red;
+      }
+      div.herotext{
+        position:relative;
+        width:350px;
+        padding-top:0px;
+      }
+      img#curvedlineblack {
+        position:absolute;
+        top:50px;
+        left:290px;
+        width:287px;
+        height: 32px;
+      }
+      h1.slogan{
+        position:absolute;
+        top:74px;
+      }
+      h1.slogan, h1.slogan > bold {
+        width:635px;
+        font-size: 72px;
+        line-height: 78px;
+        letter-spacing: -1px;
+        color: #172339;
+      }
+      p.description {
+        margin-top:305px;
+        width: 350px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 0.1px;
+      }
+      img.heroimg {
+        content:url("assets/image-hero-portrait@2x.png");
+        width:350px;
+        height: 600px;
+        margin:0px 96px 0px 135px;
+      }
+      div.references, div.references > div {
+        display:flex;
+        flex-wrap: wrap;
+        align-content:space-around;
+        width:120px;
+        margin:0px;
+      }
+      section.justworks{
+        display: flex;
+        align-items:flex-start;
+        height: 545px;
+        margin:199px 165px 0px;
+      }
+      img.jeremy {
+        position: static;
+        width:375px;
+        height: 600px;
+        margin:-55px 30px 0px 112px;
+      }
+
+      
+      img.curvedlinewithe{
+        width:65px;
+        height: 52px;  
+        margin:162px 50px 0px 0px;
+      }
+      div.justworks {
+        width:350px;
+        align-self:center;
+      }
+      div.justworks > h2, div.justworks > h2 > bold {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 56px;
+        text-align: left;
+        letter-spacing: -0.5px;
+        color: #FAF8F6;
+      }
+      div.justworks > h2 > bold {font-weight: bold}
+
+      div.justworks > p.testimonial {
+        margin:35px 0px;
+        font-size: 20px;
+        line-height: 35px;
+        text-align: left;
+        letter-spacing: 0.1px;
+      }
+      div.justworks > p.name, 
+      div.justworks > p.position{
+        text-align: left;
+      }
+
+      div.grey{
+        margin:0px 0px;
+        top:-264px;
+        height: 646px;
+      }
+
+      footer {padding:360px 165px}
+    }
 
   </style>
 </head>
@@ -334,8 +451,6 @@
 
 </body>
 </html>
-
-
 
 
 
